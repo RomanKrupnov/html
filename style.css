@@ -139,6 +139,7 @@ details[open] > summary::after {
 }
 
 
+
 /*Header*/
 
 .header {
@@ -171,6 +172,7 @@ details[open] > summary::after {
     display: block;
     padding-left: 15px;
     line-height: 42px;
+    z-index: 1;
 }
 
 .browse__link {
@@ -245,6 +247,105 @@ details[open] > summary::after {
     text-align: right;
 }
 
+/*Cart drop block*/
+.cart-drop-menu {
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.17);
+    border: 1px solid #ececec;
+    position: absolute;
+    top: 43px;
+    width: 262px;
+    z-index: 1;
+}
+
+.cart-drop-menu::before {
+    content: '';
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    display: block;
+    position: absolute;
+    top: -6px;
+    left: 30px;
+    transform: rotate(45deg);
+    border-top: 1px solid #ececec;
+    border-left: 1px solid #ececec;
+}
+
+
+.cart-drop-product {
+    list-style-type: none;
+    display: flex;
+    margin-bottom: 16px;
+    justify-content: space-between;
+
+
+}
+
+.cart-drop-product li:nth-child(2) {
+    margin-right: 55px;
+}
+
+.cart-drop-block {
+    margin-left: 16px;
+    margin-top: 20px;
+    margin-right: 16px;
+}
+
+.cart-drop-product-link {}
+
+.cart-drop-product-h4 {
+    color: #222222;
+    font-family: "Lato";
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.text-link-cart-h3 {
+    color: #222222;
+    font-family: "Lato";
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.text-link-cart {
+    width: 230px;
+    display: flex;
+    list-style-type: none;
+    justify-content: space-between;
+
+    margin-top: 19px;
+
+}
+
+.button-on-cart-pink {
+    width: 225px;
+    color: #f16d7f;
+    font-family: "Lato";
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+    border: 1px solid #f16d7f;
+    padding: 20px 0 20px;
+    margin-top: 32px;
+    text-transform: uppercase;
+}
+
+.button-on-cart-grey {
+    width: 225px;
+    color: #4a4a4a;
+    font-family: "Lato";
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+    border: 1px solid #4a4a4a;
+    padding: 20px 0 20px;
+    text-transform: uppercase;
+    margin-top: 11px;
+    margin-bottom: 20px;
+}
 
 /*Brand Block*/
 
@@ -445,7 +546,6 @@ details[open] > summary::after {
 }
 
 .drop-down-menu::before {
-
     position: absolute;
     top: -6px;
     left: 30px;
@@ -480,11 +580,13 @@ details[open] > summary::after {
 
 .menu-down {
     display: none;
+    z-index: 1;
 }
 
 .nav-li:hover .menu-down {
     display: flex;
 }
+
 .super-sale {
     position: relative;
 
@@ -1596,7 +1698,9 @@ product-img img {
     display: flex;
 }
 
-.drop-mega-menu {}
+.cart-div:hover .menu-down {
+    display: flex;
+}
 
 .browse-drop-menu {
     background-color: #ffffff;
@@ -1631,4 +1735,33 @@ product-img img {
     line-height: 28px;
     letter-spacing: 0.35px;
     text-decoration: none;
+}
+
+
+
+.cart-drop-block-slave {
+    border-bottom: 1px solid #ededed;
+}
+
+.cart-div {
+    position: relative;
+}
+
+.cart-drop-product-p {
+    color: #f16d7f;
+    font-family: "Lato";
+    font-size: 12px;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 10px;
+}
+
+.circle-fhont {
+    font-size: 16px;
+    font-weight: 400;
+    color: #c0c0c0;
+    width: 15px;
+    margin: 10px auto;
+    background-color: #fff;
+    border-radius: 50%;
 }
